@@ -26,6 +26,6 @@ server {
     ssl_prefer_server_ciphers on;
 
     location / {
-        proxy_pass http://yourdomain:6767;
+        proxy_pass http://yourserverip:6767;
     }
 }
