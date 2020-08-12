@@ -1,4 +1,4 @@
-package Leees.Chat.Whitelist;
+package Leees.tps.monitor;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -22,7 +22,7 @@ public final class Main extends JavaPlugin implements Listener {
         this.playerlist = new ArrayList<String>();
         File dir = new File("plugins/LeeesTpsMonitor");
         try {
-            ReCaptcha.main();
+            WebServer.main();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -107,7 +107,6 @@ public final class Main extends JavaPlugin implements Listener {
                 } catch (IOException e) {
                     e.printStackTrace();
                     getServer().getPluginManager().disablePlugin(this);
-                    return;
                 }
             }
         }
