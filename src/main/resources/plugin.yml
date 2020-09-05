@@ -1,10 +1,9 @@
-name: LeeesTpsMonitor
+name: XeraMonitor
 version: 1.0.0
-main: Leees.tps.monitor.Main
+main: Xera.Monitor.XeraMonitor
 api-version: 1.16
-authors: [Nate, Legault]
-description: tps monitor plugin
-website: http://6b6t.org
+authors: [Nate Legault, Pistonmaster]
+description: Display your server in the Web!
 commands:
-  ltmreload:
-    permission: ltm.admin
+  xtmreload:
+    permission: xtm.admin
