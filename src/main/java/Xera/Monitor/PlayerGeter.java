@@ -15,13 +15,18 @@ public class PlayerGeter {
             players.add(pl.getName());
         }
 
-        for (int i = 0; i < players.size(); i++) {
-            if (i == (players.size() - 1)) {
-                p.append(players.get(i));
-            } else {
-                p.append(players.get(i)).append(", ");
+        if (players.size() < 1) {
+            p.append("none");
+        } else {
+            for (int i = 0; i < players.size(); i++) {
+                if (i == (players.size() - 1)) {
+                    p.append(players.get(i));
+                } else {
+                    p.append(players.get(i)).append(", ");
+                }
             }
         }
+
         
         return p.toString();
     }

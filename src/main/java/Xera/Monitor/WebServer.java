@@ -27,7 +27,7 @@ public class WebServer {
             StringBuilder contentBuilder = new StringBuilder();
 
             try {
-                BufferedReader in = new BufferedReader(new FileReader("plugins/LeeesTpsMonitor/index.html"));
+                BufferedReader in = new BufferedReader(new FileReader("plugins/XeraMonitor/index.html"));
                 String str;
 
                 while ((str = in.readLine()) != null) {

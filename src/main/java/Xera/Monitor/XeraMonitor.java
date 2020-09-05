@@ -46,12 +46,12 @@ public class XeraMonitor extends JavaPlugin {
                             "    <br><br>\n" +
                             "    <img src=\"https://cdn.discordapp.com/attachments/703638060792938578/710023538840698880/server-icon.png\"  width=\"64\" height=\"64\">\n" +
                             "    <b><h1>XeraMonitor</h1></b></label>\n" +
-                            "    <h1>TPS:</h1> <h1 style=\"color:#00ff00;\">server_tps</h1>\n" +
+                            "    <h1>TPS:</h1> <h1 style=\"color:#00ff00;\">%server_tps%</h1>\n" +
                             "    <br>\n" +
-                            "    <h1>PlayerCount:<h1> <h1 style=\"color:#00ff00;\">server_playercount</h1>\n" +
+                            "    <h1>PlayerCount:<h1> <h1 style=\"color:#00ff00;\">%server_playercount%</h1>\n" +
                             "    <br>\n" +
                             "    <h1>PlayerList:</h1>\n" +
-                            "    <h4 style=\"color:#00ff00;\">server_playerlist</h4>\n" +
+                            "    <h4 style=\"color:#00ff00;\">%server_playerlist%</h4>\n" +
                             "      </div>  </body>\n" +
                             "          <style>\n" +
                             "body {\n" +
