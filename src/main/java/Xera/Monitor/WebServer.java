@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.nio.charset.StandardCharsets;
 
 public class WebServer {
     XeraMonitor plugin;
@@ -50,10 +51,10 @@ public class WebServer {
             String response = contentBuilder.toString()
                     .replaceAll("%server_tps%", String.valueOf(Bukkit.getServer().getTPS()[0]))
                     .replaceAll("%server_playercount%", String.valueOf(Bukkit.getServer().getOnlinePlayers().size()))
-                    .replaceAll("%server_playerlist%", String.valueOf(PlayerGeter.getPlayers()));
+                    .replaceAll("%server_playerlist%", PlayerGeter.getPlayers());
 
             try {
-                t.sendResponseHeaders(200, response.length());
+                t.sendResponseHeaders(200, response.getBytes(StandardCharsets.UTF_8).length);
             } catch (IOException e) {
                 e.printStackTrace();
             }
