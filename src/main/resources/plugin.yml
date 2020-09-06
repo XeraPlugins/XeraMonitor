@@ -1,5 +1,5 @@
 name: XeraMonitor
-version: 1.0.0
+version: 1.1.0
 main: Xera.Monitor.XeraMonitor
 api-version: 1.16
 authors: [Nate Legault, Pistonmaster]
