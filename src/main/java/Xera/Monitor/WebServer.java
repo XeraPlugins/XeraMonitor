@@ -12,12 +12,20 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 
 public class WebServer {
-    public static void main() throws IOException {
-        HttpServer server = HttpServer.create(new InetSocketAddress(6767),0);
+    XeraMonitor plugin;
+
+    public WebServer(XeraMonitor plugin) {
+        this.plugin = plugin;
+    }
+
+    public void main() throws IOException {
+        HttpServer server = HttpServer.create(new InetSocketAddress(plugin.getConfig().getInt("port")),0);
+
         server.createContext("/", new WebsiteHandler());
         server.createContext("/tps", new TpsHandler());
         server.createContext("/playercount", new PlayerCountHandler());
         server.createContext("/playerlist", new PlayerListHandler());
+
         server.setExecutor(null);
         server.start();
     }

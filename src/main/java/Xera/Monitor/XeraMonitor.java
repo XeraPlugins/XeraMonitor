@@ -8,22 +8,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class XeraMonitor extends JavaPlugin {
-    public static File indexhtml;
-
     public void onEnable() {
-        File dir = new File("plugins/XeraMonitor");
+        saveDefaultConfig();
 
-        try {
-            WebServer.main();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        File dir = new File("plugins/XeraMonitor");
 
         if (!dir.exists()) {
             dir.mkdirs();
         }
 
-        indexhtml = new File(dir, "index.html");
+        File indexhtml = new File(dir, "index.html");
+
         if (!indexhtml.exists()) {
             try {
                 indexhtml.createNewFile();
@@ -106,6 +101,12 @@ public class XeraMonitor extends JavaPlugin {
                     getServer().getPluginManager().disablePlugin(this);
                 }
             }
+        }
+
+        try {
+            new WebServer(this).main();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
